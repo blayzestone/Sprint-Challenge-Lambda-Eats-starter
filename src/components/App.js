@@ -13,6 +13,8 @@ import FormContainer from "./FormContainer";
 
 const App = () => {
   const initialFormValues = {
+    name: '',
+    size: '',
     sauce: '',
     pepperonni: '',
     olives: '',
@@ -22,8 +24,8 @@ const App = () => {
     instructions: '', 
   }
   const initialFormErrors = {
-    size: '',
     name: '',
+    size: '',
     sauce: '',
     pepperonni: '',
     olives: '',
@@ -36,6 +38,8 @@ const App = () => {
     name: yup
       .string()
       .min(2, 'Name must be at least 2 characters long'),
+    size: yup
+      .string(),
     sauce: yup
       .string(),
     pepperonni: yup

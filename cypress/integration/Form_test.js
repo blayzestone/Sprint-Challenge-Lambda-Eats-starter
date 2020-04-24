@@ -10,7 +10,14 @@ describe('Form', () => {
   it('can submit the form', () => {
     cy.get('#instructions')
       .type('foobar')
-      .should('have.value', 'foobar');
+      .should('have.value', 'foobar')
+
+    // STRETCH
+    cy.get('#size')
+      .select('Sm');
+
+    cy.get('#size')
+      .select('M');
 
     cy.get('input[name="pepperonni"]')
       .check()

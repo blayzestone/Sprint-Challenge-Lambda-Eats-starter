@@ -39,7 +39,7 @@ const FormComponent = (props) => {
           <FormGroup check>
             <Label check>
               <Input
-              onChange={changeHandler}
+                onChange={changeHandler}
                 type="radio" 
                 name="sauce" 
                 value="Original Red"
@@ -72,7 +72,7 @@ const FormComponent = (props) => {
         </FormGroup>
         <FormGroup tag="fieldset">
           <legend>Choice of toppings</legend>
-          <FormGroup check>
+          <FormGroup check style={{ display: "inline-block", width: "50%" }}>
           <Label check>
             <Input
               onChange={changeHandler}
@@ -83,7 +83,7 @@ const FormComponent = (props) => {
             Pepperonni
           </Label>
         </FormGroup>
-        <FormGroup check>
+        <FormGroup check style={{ display: "inline-block", width: "50%" }}>
           <Label check>
           <Input
               onChange={changeHandler}
@@ -94,7 +94,7 @@ const FormComponent = (props) => {
             Olives
           </Label>
         </FormGroup>
-        <FormGroup check>
+        <FormGroup check style={{ display: "inline-block", width: "50%" }}>
           <Label check>
           <Input
               onChange={changeHandler}
@@ -105,7 +105,7 @@ const FormComponent = (props) => {
             Sausage
           </Label>
         </FormGroup>
-        <FormGroup check>
+        <FormGroup check style={{ display: "inline-block", width: "50%" }}>
           <Label check>
           <Input
               onChange={changeHandler}
@@ -116,7 +116,7 @@ const FormComponent = (props) => {
             Extra Cheese
           </Label>
         </FormGroup>
-        <FormGroup check>
+        <FormGroup check style={{ display: "inline-block", width: "50%" }}>
           <Label check>
           <Input
               onChange={changeHandler}
@@ -137,11 +137,6 @@ const FormComponent = (props) => {
             id="instructions"
           >
           </Input>
-        </FormGroup>
-        <FormGroup>
-          <FormText color="muted">
-            Anything else?
-          </FormText>
         </FormGroup>
         <Button onClick={submitHandler}>Add to Order</Button>
       </Form>

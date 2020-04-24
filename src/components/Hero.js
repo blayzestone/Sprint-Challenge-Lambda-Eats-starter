@@ -7,6 +7,8 @@ const Hero = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url('Pizza.jpg');
+  background-size: cover;
 `;
 
 export default Hero;

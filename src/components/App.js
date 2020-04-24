@@ -116,7 +116,12 @@ const App = () => {
         <Link className="h5" to="/">Home</Link>
       </Header>
 
-      <Switch>
+        <Route path="/">
+          <Hero>
+            <CTA />
+          </Hero>  
+        </Route>
+
         <Route path="/pizza">
           <FormContainer>
           <Form changeHandler={onInputChange} submitHandler={submitHandler} errors={formErrors}/>
@@ -125,12 +130,6 @@ const App = () => {
           return <pre style={{ fontSize: "1.6rem", margin: "1rem auto", padding: "0.5rem", width: "75vw"}} key={order.id}>{JSON.stringify(order)}</pre>
         })}
         </Route>
-        <Route path="/">
-          <Hero>
-            <CTA />
-          </Hero>
-        </Route>
-      </Switch>
     </>
   );
 };

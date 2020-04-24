@@ -129,13 +129,14 @@ const FormComponent = (props) => {
         </FormGroup>
         </FormGroup>
         <FormGroup>
-          <Label for="specialInstructions">Special Instructions</Label>
+          <Label for="instructions">Special Instructions</Label>
           <Input 
             onChange={changeHandler}
             type="textarea" 
             name="instructions" 
-            id="specialInstructions" 
-          />
+            id="instructions"
+          >
+          </Input>
         </FormGroup>
         <FormGroup>
           <FormText color="muted">

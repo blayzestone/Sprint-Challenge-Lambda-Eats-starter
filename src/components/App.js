@@ -13,7 +13,6 @@ import FormContainer from "./FormContainer";
 
 const App = () => {
   const initialFormValues = {
-    size: '',
     sauce: '',
     pepperonni: '',
     olives: '',
@@ -23,12 +22,34 @@ const App = () => {
     instructions: '', 
   }
   const initialFormErrors = {
+    size: '',
     name: '',
+    sauce: '',
+    pepperonni: '',
+    olives: '',
+    sausage: '',
+    extraCheese: '',
+    veggies: '',
+    instructions: '', 
   }
   const formSchema = yup.object().shape({
     name: yup
       .string()
       .min(2, 'Name must be at least 2 characters long'),
+    sauce: yup
+      .string(),
+    pepperonni: yup
+      .string(),
+    olives: yup
+      .string(),
+    sausage: yup
+      .string(),
+    extraCheese: yup
+      .string(),
+    veggies: yup
+      .string(),
+    instructions: yup
+      .string(),
   });
 
   const [formValues, setFormValues] = useState(initialFormValues);

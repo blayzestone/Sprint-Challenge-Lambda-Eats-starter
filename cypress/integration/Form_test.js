@@ -29,4 +29,12 @@ describe('Form', () => {
     cy.contains('Add to Order')
       .click();
   })
+
+  it('displays validation errors', () => {
+    cy.get('input[name="name"]')
+    .type('a')
+    .should('have.value', 'a');
+    
+    cy.contains('Name must be at least 2 characters long');
+  })
 })

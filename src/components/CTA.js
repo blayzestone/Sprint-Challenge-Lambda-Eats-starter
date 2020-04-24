@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const CTA = () => {
   return(
       <Link to="/pizza">
-        <Button color="success">Order Pizza</Button>
+        <Button style={{ fontSize: "2rem" }} color="primary">Order Pizza</Button>
       </Link>
   );
 }
